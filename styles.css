@@ -3,11 +3,16 @@
 }
 
 ul.navbar {
+    position: fixed;
     list-style-type: none;
+    top: 0;
+    width: 61.6%;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    z-index: 1;
+
 }
 
 ul.navbar li {float: left;}
@@ -18,4 +23,18 @@ ul.navbar li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+ul.navbar li a:hover:not(.active) {background-color: #111;}
+
+ul.navbar li a.active {background-color: #4C678C;}
+
+@media screen and (max-width: 600px) {
+    ul.topnav li {float: none;}
+}
+
+#twitchbox {
+    padding: 20px;
+    margin-top: 100px;
+    height: 1500px;
 }
