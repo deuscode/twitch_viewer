@@ -1,18 +1,21 @@
+body {
+    background-color: #205d8a;
+}
+
 .col-md-6 {
-    background-color: black;
+    background-color: ;
 }
 
 ul.navbar {
     position: fixed;
     list-style-type: none;
-    top: 0;
-    width: 61.6%;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
     z-index: 1;
-
+    opacity: 0.8;
+    border-radius: 15px;
 }
 
 ul.navbar li {float: left;}
@@ -37,4 +40,8 @@ ul.navbar li a.active {background-color: #4C678C;}
     padding: 20px;
     margin-top: 100px;
     height: 1500px;
+}
+
+#title {
+    text-align: center;
 }
