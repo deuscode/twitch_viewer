@@ -2,10 +2,6 @@ body {
     background-color: #205d8a;
 }
 
-.col-md-6 {
-    
-}
-
 ul.navbar {
     position: fixed;
     list-style-type: none;
