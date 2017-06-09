@@ -1,21 +1,26 @@
 // global variables
 var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
-var apiURL = 'https://kaypeter.com/homebase/channels/'
+var apiURL = 'https://kaypeter.com/homebase/streams/'
 
 // iterate through channels
-for (var i = 0; i < channels.length; i++) {
-    ajaxCall();
-};
+channels.forEach(channel => ajaxCall(channel));
 // make api call to backend server
-function ajaxCall() {
+function ajaxCall(channel) {
     $.ajax({
         type: 'GET',
-        url: apiURL + channels[i] + '?callback=?',
+        url: apiURL + channel,
         success: function (data) {
             console.log(data);
         },
         error: function (err) {
-            console.log('error');
+            console.log('error', err);
         }
     });
 };
+
+// test localStorage method for saving data
+localStorage.setItem('channels', JSON.stringify(channels))
+JSON.parse()
+
+// data attribute in HTML
+// data-chanl="ESL_SC2"
