@@ -18,6 +18,9 @@ function ajaxCall(channel) {
     });
 };
 
+$(document).ready(function() {
+
+});
 // test localStorage method for saving data
 // localStorage.setItem('channels', JSON.stringify(channels))
 // JSON.parse()
