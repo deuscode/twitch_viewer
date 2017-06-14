@@ -12,7 +12,8 @@ function ajaxCall(channel) {
         success: function (data) {
             console.log(data);
             // append data to html
-            $("#twitchbox").append('<p>' + data.display_name + ' - ' + data.status + '</p>');
+            $("#twitchbox").append('<p>' + data.display_name + ' - ' + data.status + '<br>' +
+                '<img src="' + data.logo + '">' +'</p>');
         },
         // catch error and append to html
         error: function (err) {
