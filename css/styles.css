@@ -28,16 +28,25 @@ ul.navbar li a:hover:not(.active) {background-color: #111;}
 
 ul.navbar li a.active {background-color: #4C678C;}
 
+.twitchdata {
+    text-align: center;
+}
+
 @media screen and (max-width: 600px) {
     ul.topnav li {float: none;}
 }
 
 #twitchbox {
+    overflow: scroll;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 20px;
     margin-top: 100px;
-    height: 1500px;
+    height: 1500px;    
+}
+
+#twitchbox::-webkit-scrollbar {
+    display: none;
 }
 
 #title {
