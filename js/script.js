@@ -1,5 +1,5 @@
 // global variables
-var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+var channels = ["ESL_SC2", "OgamingSC2", "syntag", "freecodecamp", "hardlydifficult", "habathcx", "RobotCaleb", "noobs2ninjas"];
 var apiURL = 'https://kaypeter.com/homebase/channels/'
 
 // iterate through channels
@@ -12,8 +12,7 @@ function ajaxCall(channel) {
         success: function (data) {
             console.log(data);
             // append data to html
-            $("#twitchbox").append('<div class="twitchdata"><p>' + data.display_name + ' - ' + data.status + '<br>' +
-                '<img src="' + data.logo + '">' +'</p></div>');
+            $("#twitchbox").append('<img src="' + data.logo + '">');
         },
         // catch error and append to html
         error: function (err) {
@@ -24,7 +23,7 @@ function ajaxCall(channel) {
 };
 
 $(document).ready(function() {
- 
+   
 });
 // test localStorage method for saving data
 // localStorage.setItem('channels', JSON.stringify(channels))
