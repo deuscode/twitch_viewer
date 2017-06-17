@@ -4,6 +4,10 @@ body {
     padding: 0;
 }
 
+input {
+    width: 80%;
+}
+
 #title {
     text-align: center;
     color: white;
@@ -34,4 +38,11 @@ body {
 
 #twitchbox img {
     border-radius: 6px;
+}
+
+#addchannel {
+    overflow: hidden;
+    padding-right: .5em;
+    text-align: center;
+    padding: 20px;
 }
