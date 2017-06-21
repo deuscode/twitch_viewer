@@ -14,12 +14,12 @@ function ajaxCall(channel) {
         success: function (data) {
             console.log(data);
             // append data to html
-            $("#twitchbox").append('<a href="#" target="_blank"><img src="' + data.logo + '"></a>');
+            $("#twitchbox").append('<a href="' + data.url + '" target="_blank"><img src="' + data.logo + '"></a>');
         },
         // catch error and append to html
         error: function (err) {
             console.log('error', err);
-            $("#twitchbox").append('<p>' + data.status + '</p>');
+            $("#twitchbox").append('<p>' + err + '</p>');
         }
     });
 };
