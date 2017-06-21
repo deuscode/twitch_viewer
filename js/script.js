@@ -3,7 +3,9 @@ var channels = ["ESL_SC2", "OgamingSC2", "syntag", "freecodecamp", "hardlydiffic
 var apiURL = 'https://kaypeter.com/homebase/channels/'
 
 // iterate through channels
-channels.forEach(channel => ajaxCall(channel));
+channels.forEach(function (channel) {
+    return ajaxCall(channel);
+});
 // make api call to my backend server
 function ajaxCall(channel) {
     $.ajax({
@@ -22,7 +24,7 @@ function ajaxCall(channel) {
     });
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
 
 });
 // test localStorage method for saving data
