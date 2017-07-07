@@ -18,7 +18,7 @@ $(document).ready(function () {
                 } else {
                     console.log(data);
                     // append data to html
-                    $("#twitchbox").append('<a data-href="' + data.url + '" target="_blank"><img src="' + data.logo + '"></a>');
+                    $("#twitchbox").append('<a href="' + data.url + '" target="_blank"><img src="' + data.logo + '"></a>');
                 }
             },
         });
