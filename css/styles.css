@@ -1,22 +1,23 @@
 body {
-    background-color: #205d8a;
+    background-color: #416893;
     margin: 0;
     padding: 0;
 }
 
 .status {
-    color: red;
-    background-color: ;
-    border-radius: 2px;
+    color: #D8DDE5;
+    background-color: rgba(14, 42, 62, 0.5);
+    border-radius: 10px;
     text-align: center;
     margin: 0 auto;
-    width: 25%;
+    width: 40%;
     padding: 10px 15px 10px 15px;
+    display: none;
 }
 
 #title {
     text-align: center;
-    color: white;
+    color: #B1CBE7;
 }
 
 #twitchbox {
@@ -48,6 +49,7 @@ body {
 
 #addchannel {
     margin-top: 10px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
