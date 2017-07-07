@@ -14,7 +14,7 @@ $(document).ready(function () {
             url: apiURL + channel,
             success: function (data) {
                 if (data.status >= 400) {
-                    alert(data.message);
+                     $(".status").append("This channel is either closed or does not exist! Please enter in another channel.");
                 } else {
                     console.log(data);
                     // append data to html
@@ -26,9 +26,6 @@ $(document).ready(function () {
 
     $("#addchannel-button").on('click', function (channel) {
         var channel = $("#addchannel-box").val();
-        if (!channel) {
-
-        }
         ajaxCall(channel);
         $("#addchannel-box").val('');
         var test = $('a')
