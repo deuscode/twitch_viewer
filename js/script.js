@@ -7,14 +7,16 @@ $(document).ready(function () {
     channels.forEach(function (channel) {
         return ajaxCall(channel);
     });
-    // make api call to my backend server
+    // make ajax call to backend server
     function ajaxCall(channel) {
         $.ajax({
             type: 'GET',
             url: apiURL + channel,
             success: function (data) {
+                // display message if channel doesn't exist
                 if (data.status >= 400) {
-                     $(".status").append("This channel is either closed or does not exist! Please enter in another channel.");
+                     $(".status span").replaceWith("This channel is either closed or does not exist! Please enter in another channel.");
+                     $(".status").css("display", "block");
                 } else {
                     console.log(data);
                     // append data to html
@@ -23,19 +25,16 @@ $(document).ready(function () {
             },
         });
     };
-
-    $("#addchannel-button").on('click', function (channel) {
+    // add channel click function
+    $("#addchannel-button").on('click', function(channel) {
         var channel = $("#addchannel-box").val();
+        $(".status").css("display", "none");
         ajaxCall(channel);
         $("#addchannel-box").val('');
-        var test = $('a')
-        console.log('array of channels', test[0])
+    });
+    // add channel on submit
+    $("form").submit(function(e) {
+            e.preventDefault();
+            $("#addchannel-button").click();
     })
-
 });
-// test localStorage method for saving data
-// localStorage.setItem('channels', JSON.stringify(channels))
-// JSON.parse()
-
-// data attribute in HTML
-// data-chanl="ESL_SC2"
