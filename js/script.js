@@ -1,6 +1,7 @@
 // global variables
 var channels = ["ESL_SC2", "OgamingSC2", "syntag", "freecodecamp", "hardlydifficult", "habathcx", "RobotCaleb", "noobs2ninjas", "Lost_In_House", "serpent_AI"];
-var apiURL = 'https://kaypeter.com/homebase/channels/'
+var apiURLfirst = 'https://kaypeter.com/homebase/streams/'
+var apiURLsecond = 'https://kaypeter.com/homebase/channels/'
 
 $(document).ready(function () {
     // iterate through channels
@@ -11,7 +12,7 @@ $(document).ready(function () {
     function ajaxCall(channel) {
         $.ajax({
             type: 'GET',
-            url: apiURL + channel,
+            url: apiURLsecond + channel,
             success: function (data) {
                 // display message if channel doesn't exist
                 if (data.status >= 400) {
