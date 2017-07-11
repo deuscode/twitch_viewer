@@ -57,3 +57,13 @@ body {
     text-align: center;
 }
 
+#offlinestreams {
+    -webkit-filter: blur(6px) sepia(100%);
+    filter: blur(6px) sepia(100%);
+}
+
+#offlinestreams:hover {
+    filter: blur(0px) sepia(100%);
+    -webkit-transition: all .5s ease-in;
+    transition: all .3s ease-in;
+}
