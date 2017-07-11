@@ -32,10 +32,12 @@ $(document).ready(function () {
                 if (data.status >= 400) {
                     $(".status span").replaceWith("This channel is either closed or does not exist! Please enter in another channel.");
                     $(".status").css("display", "block");
-                } else {
+                } else if (data.logo) {
                     console.log(data);
                     // append data to html
                     $("#twitchbox").append('<a href="' + data.url + '" target="_blank"><img src="' + data.logo + '" title="' + "NOW STREAMING:  " + data.game.toString() + ": " + data.status.toString() + '"></a>');
+                } else {
+                    $("#twitchbox").append('<a href="' + data.url + '" target="_blank"><img src="img/twitchicon.png" alt="Offline" title="OFFLINE - ' + data.name.toString() + '" id="offlinestreams"></a>');
                 }
             },
         });
@@ -49,10 +51,12 @@ $(document).ready(function () {
                 if (data.status >= 400) {
                     $(".status span").replaceWith("This channel is either closed or does not exist! Please enter in another channel.");
                     $(".status").css("display", "block");
-                } else {
+                } else if (data.logo) {
                     console.log(data);
                     // append data to html
-                    $("#twitchbox").append('<a href="' + data.url + '" target="_blank"><img src="' + data.logo + '" alt="Offline" title="OFFLINE" id="offlinestreams"></a>');
+                    $("#twitchbox").append('<a href="' + data.url + '" target="_blank"><img src="' + data.logo + '" alt="Offline" title="OFFLINE - ' + data.name.toString() + '" id="offlinestreams"></a>');
+                } else {
+                    $("#twitchbox").append('<a href="' + data.url + '" target="_blank"><img src="img/twitchicon.png" alt="Offline" title="OFFLINE - ' + data.name.toString() + '" id="offlinestreams"></a>');
                 }
             },
         });
